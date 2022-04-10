@@ -29,6 +29,7 @@ class MyElement extends LitElement {
         <li>Counter: ${this.counter}</li>
         <li><button @click="${this.increment}">Count up</button></li>
       </ul>
+      <my-other-element />
     `;
   }
 
