@@ -1,0 +1,22 @@
+{
+  "name": "learn-lit",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "ISC",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "tsc --watch",
+    "start": "wds --node-resolve --open --watch"
+  },
+  "dependencies": {
+    "lit": "^2.2.2"
+  },
+  "devDependencies": {
+    "@web/dev-server": "^0.1.30",
+    "@web/dev-server-legacy": "^0.1.7",
+    "@web/test-runner": "^0.13.27",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
+  }
+}
