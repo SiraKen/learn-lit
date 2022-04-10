@@ -13,13 +13,18 @@ class MyElement extends LitElement {
   static override styles = css`
     :host {
       display: block;
-      color: gray;
+      /* color: gray; */
+    }
+    .list {
+      li {
+        color: red;
+      }
     }
   `;
 
   override render() {
     return html`
-      <ul>
+      <ul class="list">
         <li>${this.name}</li>
         <li>Counter: ${this.counter}</li>
         <li><button @click="${this.increment}">Count up</button></li>
