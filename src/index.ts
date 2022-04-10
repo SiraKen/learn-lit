@@ -1,40 +1,27 @@
 import { LitElement, html, css } from "lit";
-import { customElement, property, state } from "lit/decorators.js";
-import "./other";
+import { customElement, property } from "lit/decorators.js";
+import "./counter";
+import "./janken";
 
 @customElement("my-element")
 class MyElement extends LitElement {
   @property({ type: String })
   name: string = "";
 
-  @state()
-  counter: number = 0;
-
   static override styles = css`
     :host {
-      display: block;
-      /* color: gray; */
-    }
-    .list {
-      li {
-        color: red;
-      }
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     }
   `;
 
   override render() {
     return html`
-      <ul class="list">
-        <li>${this.name}</li>
-        <li>Counter: ${this.counter}</li>
-        <li><button @click="${this.increment}">Count up</button></li>
-      </ul>
-      <my-other-element />
+      <h1>Hello, ${this.name}</h1>
+      <!-- tips: jsx的な閉じタグ<element />はなんか動かない -->
+      <counter-element></counter-element>
+      <janken-element></janken-element>
     `;
-  }
-
-  increment() {
-    this.counter++;
   }
 }
 
